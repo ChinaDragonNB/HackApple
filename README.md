@@ -5,6 +5,10 @@
 > 我是打算Windows与Mac一起使用，所以我想出的办法是从磁盘中挤出一块空间装Mac，与Windows不冲突。
 >
 > **Tips：本文章只是给大家的一个参考，并不适用所有人的配置。**
+>
+> GitHub：https://github.com/ChinaDragonNB/HackApple
+>
+> 有问题请提 Issues。
 
 时隔两年，再次想起玩黑苹果，从以前的`Clover`主流引导，到现在的`Open Core`引导，我发现遇到的问题并没有那么多了，以前用`Clover`做引导各种黑屏死机，现在倒也还算顺畅。`Clover`与`Open Core`并没有太大的区别，当然还是建议你多了解`Open Core`，以便于在遇到问题的时候能够自己动手解决。
 
