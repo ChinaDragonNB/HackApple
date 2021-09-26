@@ -89,6 +89,16 @@
 * OC Auxiliary Tools（Open Core配置工具，Windows中使用）：https://github.com/ic005k/QtOpenCoreConfig/releases
 * Open Core Configurator（Open Core配置工具，Mac中使用）：https://links.jianshu.com/go?to=https%3A%2F%2Fmackie100projects.altervista.org%2F
 * Disk Genius（硬盘分区工具）：https://www.diskgenius.cn/
+* EasyUEFI（引导配置工具）：https://www.easyuefi.com/
+
+---
+
+EasyUEFI、我的EFI放到下面云盘了，其他东西在官网都能下载到。
+
+> https://wws.lanzoui.com/b020km9ih
+> 密码:6hw2
+
+
 
 # 写入镜像
 
@@ -439,9 +449,51 @@ GitHub在国内可能访问比较慢，我就将内容复制过来了。
 
 # 配置启动引导
 
+现在进入黑苹果都还需要用到U盘的EFI来引导，总不能一直插着U盘吧，这时候就可以用到之前创建的ESP分区了，将EFI文件放入到分区里然后用工具配置引导即可。
+
+## 1. 把EFI放入ESP分区
+
+![image-20210926160713041](images/image-20210926160713041.png)
+
+## 2. 配置EFI
+
+打开EasyUEFI工具添加一个新的引导
+
+![image-20210926160705229](images/image-20210926160705229.png)
+
+把类型选一下，描述（在启动BIOS中显示的名称）填一下，然后选中ESP分区。
+
+![image-20210926160636323](images/image-20210926160636323.png)
+
+之后浏览文件，将efi配置文件选中。
+
+![image-20210926160619944](images/image-20210926160619944.png)
+
+## 3. 完成
+
+添加引导之后的样子。
+
+![image-20210926160736712](images/image-20210926160736712.png)
+
+重启电脑进入BIOS也可以看到该引导了。
+
+![image-20210926160820074](images/image-20210926160820074.png)
+
+如果你想默认启动电脑进入MacOS系统的话，就把黑苹果引导移到第一位就行。
+
 # 问题
 
 毕竟不是白苹果，遇到一些问题也是正常的，去解决就行了。在此我列出了一些常见的问题，并提供了解决办法，以后在使用过程中遇到的问题，我会在博客中记录。请留意文章：https://www.ak47007.com/article/detail/nEJ7fm#/
 
 ## 黑苹果与Windows时间不一致
+
+参考文章：https://www.jianshu.com/p/a1bb585832e6
+
+> **复制大法**
+>
+> windows下管理员模式运行cmd或者powershell，输入下面的命令
+>
+> ```bash
+> Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+> ```
 
