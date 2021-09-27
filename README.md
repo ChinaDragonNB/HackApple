@@ -45,6 +45,7 @@
 > 关于显卡刷BIOS，可以参考下面的文章，刷BIOS的方式都差不多，只要找对合适的ROM就行，但刷BIOS有风险，显卡与ROM不兼容导致开机黑屏，刷之前先备份原来的ROM，CPU无核显先自备亮机卡再做测试，以防不测。
 >
 >  * AMD 蓝宝石RX580 2048SP 刷显卡bios降RX570 黑果免驱—细节补充：https://www.applex.net/threads/amd-rx580-2048sp-biosrx570.93377/
+>  * 我的显卡原版BIOS备份与RX570 BIOS：https://wws.lanzoui.com/b020kn1xa 密码:fsej
 
 ## 系统信息
 
